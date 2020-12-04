@@ -16,7 +16,7 @@ const DeployToAzureStorage = async () =>
 		const container = core.getInput("container")
 		const requireIndex = core.getInput("require-index")
 
-		if (requireIndex)
+		if (requireIndex === 'true')
 		{
 			if (!fs.existsSync(path.join(sourcePath, "index.html")))
 			{
